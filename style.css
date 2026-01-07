@@ -1298,6 +1298,7 @@ h4 {
 @media (max-width: 480px) {
     .hero-title {
         font-size: 2rem;
+
     }
 
     .hero-subtitle {
@@ -1474,5 +1475,97 @@ h4 {
 
     .nav-menu.active {
         display: flex !important;
+    }
+}
+
+/* About Page Specific Styles */
+.about-hero {
+    padding: 6rem 1.5rem !important;
+    text-align: center;
+}
+
+.about-section {
+    padding: 5rem 0;
+}
+
+.text-left {
+    text-align: left !important;
+    margin-bottom: 2rem;
+}
+
+.content-wrapper {
+    max-width: 800px;
+}
+
+.text-block p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--gray-700);
+}
+
+.mission-section {
+    background-color: var(--gray-50);
+    padding: 5rem 0;
+}
+
+.mission-card {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    border-left: 6px solid var(--primary-green);
+}
+
+.mission-quote {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    line-height: 1.4;
+    font-style: italic;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.resource-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: var(--radius-lg);
+    text-align: center;
+    border: 1px solid var(--gray-200);
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.resource-card i {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 1.5rem;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .about-hero .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .mission-card {
+        padding: 1.5rem;
+    }
+
+    .mission-quote {
+        font-size: 1.2rem;
+    }
+
+    .about-section {
+        padding: 3rem 0;
     }
 }
