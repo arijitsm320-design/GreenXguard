@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GreenXguard | CCPA Greenwashing Audit & Verification</title>
+    <title>GreenXguard | CCPA-Compliant Verification for Indian D2C Brands</title>
     <meta name="description"
-        content="Get your sustainability claims legally verified. Avoid CCPA penalties for greenwashing. Starting ₹999. 24-hour turnaround.">
+        content="Get your sustainability claims CCPA-verified. Display the GreenXguard badge proudly. Protect your brand, build consumer trust.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,77 +14,938 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <!-- Professional Hero and Banner Styles -->
+    <style>
+        /* Enhanced Professional Hero Section */
+        .hero {
+            padding: 7rem 1.5rem 5rem;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg,
+                    rgba(0, 255, 76, 0.98) 0%,
+                    rgba(172, 255, 201, 0.98) 50%,
+                    rgba(3, 182, 27, 0.98) 100%);
+            border-bottom: 1px solid rgba(176, 182, 178, 0.1);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%2310B981' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M0 0h24v24H0V0zm24 24h24v24H24V24zm24 24h24v24H48V48zm24 24h24v24H72V72zm24 24h24v24H96V96zM0 48h24v24H0V48zm48 0h24v24H48V48zm48 0h24v24H96V48zM0 96h24v24H0V96zm48 0h24v24H48V96zm48 0h24v24H96V96z'/%3E%3C/g%3E%3C/svg%3E"),
+                linear-gradient(135deg, transparent 0%, rgba(16, 185, 129, 0.02) 50%, transparent 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg,
+                    rgba(14, 154, 107, 0.1) 0%,
+                    rgba(5, 150, 105, 0.15) 100%);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            box-shadow: 0 4px 15px rgba(17, 154, 108, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.3),
+                    transparent);
+            transition: 0.5s;
+        }
+
+        .hero-badge:hover::before {
+            left: 100%;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+
+        .hero-stats::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(16, 185, 129, 0.1) 50%,
+                    transparent 100%);
+            pointer-events: none;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.75rem 1.5rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-green), var(--dark-green));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .stat:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray-600);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.25rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .hero-actions .btn-large {
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+            min-width: 200px;
+        }
+
+        /* Enhanced Professional Banner */
+        .vision-banner {
+            padding: 5rem 1.5rem;
+            background: linear-gradient(135deg,
+                    rgba(5, 150, 105, 0.97) 0%,
+                    rgba(16, 185, 129, 0.95) 50%,
+                    rgba(52, 211, 153, 0.93) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .vision-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(45deg, rgba(255, 255, 255, 0.03) 25%, transparent 25%,
+                    transparent 50%, rgba(255, 255, 255, 0.03) 50%,
+                    rgba(255, 255, 255, 0.03) 75%, transparent 75%, transparent);
+            background-size: 60px 60px;
+            animation: subtleMove 30s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes subtleMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 60px 60px;
+            }
+        }
+
+        .vision-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .vision-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .vision-text {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            line-height: 1.7;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .vision-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .vision-stat {
+            text-align: center;
+            padding: 1.75rem;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.5) 50%,
+                    rgba(255, 255, 255, 0) 100%);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .vision-stat:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .vision-stat:hover::before {
+            transform: translateX(100%);
+        }
+
+        .vision-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: white;
+            display: block;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff 0%, #e6ffe6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .vision-stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.85);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .vision-cta {
+            margin-top: 3rem;
+            position: relative;
+        }
+
+        .vision-cta::before {
+            content: '';
+            position: absolute;
+            top: -1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg,
+                    rgba(255, 255, 255, 0) 0%,
+                    rgba(255, 255, 255, 0.3) 50%,
+                    rgba(255, 255, 255, 0) 100%);
+        }
+
+        .vision-cta .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.125rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary-green);
+            font-weight: 700;
+            border: none;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vision-cta .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.4),
+                    transparent);
+            transition: 0.5s;
+        }
+
+        .vision-cta .btn:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .vision-cta .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Remove gap before footer */
+        .cta-section {
+            padding: 5rem 1.5rem 0;
+            margin-bottom: 0;
+        }
+
+        .footer {
+            margin-top: 0;
+            padding-top: 4rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .vision-title {
+                font-size: 2.2rem;
+            }
+
+            .vision-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 1.5rem 3rem;
+            }
+
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-stats::before {
+                display: none;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-actions .btn-large {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .vision-banner {
+                padding: 4rem 1.5rem;
+            }
+
+            .vision-title {
+                font-size: 1.8rem;
+            }
+
+            .vision-text {
+                font-size: 1rem;
+            }
+
+            .vision-stats {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.8rem;
+            }
+
+            .vision-title {
+                font-size: 1.6rem;
+            }
+
+            .stat,
+            .vision-stat {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <style>
+        /* Enhanced Perfect Hero Section Styles */
+        .hero {
+            padding: 8rem 1.5rem 6rem;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg,
+                    #f8fafc 0%,
+                    #f0fdf4 50%,
+                    #ecfdf5 100%);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.1);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
+                url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%2310B981' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+            background-size: auto, auto, 60px 60px;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Hero Badge */
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg,
+                    rgba(16, 185, 129, 0.1) 0%,
+                    rgba(5, 150, 105, 0.15) 100%);
+            backdrop-filter: blur(10px);
+            padding: 0.875rem 1.75rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-green);
+            margin-bottom: 2.5rem;
+            border: 1px solid rgba(16, 185, 129, 0.15);
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-badge i {
+            font-size: 1rem;
+            color: var(--primary-green);
+        }
+
+        .hero-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.4),
+                    transparent);
+            transition: 0.6s ease;
+        }
+
+        .hero-badge:hover::before {
+            left: 100%;
+        }
+
+        .hero-badge.pulse {
+            animation: subtlePulse 2s ease-in-out infinite;
+        }
+
+        @keyframes subtlePulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        /* Hero Title */
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .hero-title-line {
+            display: block;
+        }
+
+        .hero-title-line:first-child {
+            color: var(--gray-700);
+            font-weight: 600;
+        }
+
+        .hero-title-line.highlight {
+            color: #2b00ff;
+            position: relative;
+            background: linear-gradient(135deg, #04ff00 0%, #1aae3f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            padding-bottom: 0.5rem;
+        }
+
+        .hero-title-line.highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 3px;
+            background: linear-gradient(90deg, #00ff2a, #1cc422);
+            border-radius: 2px;
+        }
+
+        /* Hero Subtitle */
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        /* Hero Stats */
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin: 3rem auto 4rem;
+            max-width: 900px;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            background: white;
+            border-radius: var(--radius-xl);
+            border: 1px solid rgba(16, 185, 129, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg,
+                    var(--primary-green) 0%,
+                    #00ff73 50%,
+                    var(--primary-green) 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            border-color: rgba(16, 185, 129, 0.2);
+        }
+
+        .stat:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-light), rgba(43, 0, 255, 0.1));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            transition: all 0.3s ease;
+        }
+
+        .stat:hover .stat-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--primary-green), #00ff4c);
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2.75rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary-green), #00ff55);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: all 0.3s ease;
+        }
+
+        .stat:hover .stat-number {
+            background: linear-gradient(135deg, #00ff15, var(--primary-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* Hero Actions */
+        .hero-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .hero-actions .btn-large {
+            padding: 1.125rem 3rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            min-width: 300px;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-actions .btn-large i {
+            margin-right: 0.75rem;
+            font-size: 1.125rem;
+        }
+
+        .hero-cta-note {
+            font-size: 0.95rem;
+            color: var(--gray-500);
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .hero-cta-note i {
+            color: var(--primary-green);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+
+            .hero-stats {
+                gap: 1.5rem;
+            }
+
+            .stat {
+                padding: 1.75rem 1.25rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 6rem 1.5rem 4rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.125rem;
+                padding: 0 1rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                gap: 1.25rem;
+            }
+
+            .hero-actions .btn-large {
+                min-width: 280px;
+                padding: 1rem 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-badge {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.8rem;
+            }
+
+            .hero-actions .btn-large {
+                min-width: 100%;
+                padding: 1rem 2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Announcement Bar -->
-    <div class="announcement-bar">
-        <p>⚠️ CCPA 2024 is issuing penalties for false green claims. Get verified now!</p>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo-wrapper">
-                <img src="logo.jpeg" alt="GreenXguard Logo" class="logo-img">
+            <a href="index.html" class="logo-wrapper">
+                <img src="assets/logo.png" alt="GreenXguard Logo" class="logo-img">
                 <span class="brand-name">GreenXguard</span>
             </a>
 
             <div class="nav-menu" id="navMenu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="about.html" class="nav-link">About Us</a>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="whyus.html" class="nav-link">Why Us?</a>
             </div>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" style="display: none;">
-                <div class="hamburger-box">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
+            <button class="hamburger-menu" id="menuToggle" aria-label="Toggle menu">
+                <div class="hamburger-icon">
+                    <span class="hamburger-line line-1"></span>
+                    <span class="hamburger-line line-2"></span>
+                    <span class="hamburger-line line-3"></span>
                 </div>
             </button>
+
+            <nav class="mobile-nav" id="navMenu">
+                <div class="mobile-nav-header">
+                    <span class="nav-title">Menu</span>
+                    <button class="nav-close" id="navClose">×</button>
+                </div>
+                <div class="mobile-nav-content">
+                    <a href="#home" class="mobile-nav-link active">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="#services" class="mobile-nav-link">
+                        <i class="fas fa-shield-alt"></i> Services
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                    <a href="about.html" class="mobile-nav-link">
+                        <i class="fas fa-info-circle"></i> About Us
+                    </a>
+                </div>
+            </nav>
         </div>
     </nav>
 
-    <!-- Hero Section - Updated with greenery background and removed verification card -->
-    <section class="hero hero-with-bg" id="home">
-        <div class="hero-container">
+    <!-- Enhanced Professional Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
             <div class="hero-content">
-                <div class="badge">CCPA COMPLIANT</div>
-                <h1 class="hero-title">Don't Let <span class="highlight">Greenwashing</span> Destroy Your Brand</h1>
-                <p class="hero-subtitle" style="color: rgb(0, 0, 0);">Get your sustainability claims legally verified.
-                    Avoid penalties up to ₹10
-                    lakhs under CCPA 2024 guidelines.</p>
 
-                <!-- Updated hero stats with informational focus -->
+                <!-- Main Title -->
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Professional Verification for</span>
+                    <span class="hero-title-line highlight">Sustainable D2C Brands</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="hero-subtitle">
+                    Secure your brand's reputation with CCPA-compliant verification. Display the GreenXguard badge as
+                    proof of your authentic sustainability claims and build unwavering consumer trust.
+                </p>
+
+                <!-- Stats Grid -->
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number">24-Hour</span>
-                        <span class="stat-label">Verification Service</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">Hour Verification Process</span>
                     </div>
+
                     <div class="stat">
-                        <span class="stat-number">₹10L+</span>
-                        <span class="stat-label">Potential Penalty Protection</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span class="stat-number">₹10L</span>
+                        <span class="stat-label">Penalty Protection</span>
                     </div>
+
                     <div class="stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Confidential</span>
+                        <span class="stat-label">Confidential Audit</span>
                     </div>
                 </div>
 
+                <!-- CTA Button -->
                 <div class="hero-actions">
-                    <a href="#assessment" class="btn btn-primary btn-large">
-                        <i class="fas fa-shield-alt"></i> Get Free Risk Assessment
+                    <a href="services.html" class="btn btn-primary btn-large btn-glow">
+                        <i class="fas fa-shield-alt"></i> Begin Verification Process
                     </a>
+                    <p class="hero-cta-note">
+                        <i class="fas fa-check-circle"></i> Trusted by Indian D2C brands
+                    </p>
                 </div>
             </div>
-
-            <!-- Removed the verification card from hero -->
         </div>
     </section>
+
 
     <!-- Problem Section -->
     <section class="problem-section">
@@ -123,310 +984,297 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-section" id="services">
+
+    <!-- Professional Banner -->
+    <section class="vision-banner">
         <div class="container">
-            <h2 class="section-title">Our Verification Services</h2>
-            <p class="section-subtitle">Choose the right package for your needs</p>
+            <div class="vision-content">
+                <h2 class="vision-title">Industry-Leading Verification Standards</h2>
 
-            <div class="pricing-grid">
-                <!-- Basic Plan -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Basic Check</h3>
-                        <div class="price">
-                            <span class="currency">₹</span>
-                            <span class="amount">999</span>
-                            <span class="period">/one-time</span>
-                        </div>
-                        <p class="pricing-description">For startups testing single claims</p>
+                <p class="vision-text">
+                    We've established the benchmark for sustainability verification in India's D2C ecosystem.
+                    Our comprehensive verification framework ensures every claim is authenticated, every standard
+                    is met, and every brand is protected under CCPA 2024 guidelines.
+                </p>
+
+                <div class="vision-stats">
+                    <div class="vision-stat">
+                        <span class="vision-stat-number">99.7%</span>
+                        <span class="vision-stat-label">Verification Accuracy</span>
                     </div>
-                    <div class="pricing-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Single claim verification</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>2-page audit report</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Gap analysis</span>
-                        </div>
-                        <div class="feature disabled">
-                            <i class="fas fa-times-circle"></i>
-                            <span>Verification badge</span>
-                        </div>
+                    <div class="vision-stat">
+                        <span class="vision-stat-number">24/7</span>
+                        <span class="vision-stat-label">Audit Support</span>
                     </div>
-                    <a href="#assessment" class="btn btn-outline btn-block">Select Plan</a>
+                    <div class="vision-stat">
+                        <span class="vision-stat-number">0</span>
+                        <span class="vision-stat-label">Penalty Incidents</span>
+                    </div>
+                    <div class="vision-stat">
+                        <span class="vision-stat-number">ISO</span>
+                        <span class="vision-stat-label">Compliance Standards</span>
+                    </div>
                 </div>
 
-                <!-- Popular Plan -->
-                <div class="pricing-card popular">
-                    <div class="popular-badge">MOST POPULAR</div>
-                    <div class="pricing-header">
-                        <h3>Verified Badge</h3>
-                        <div class="price">
-                            <span class="currency">₹</span>
-                            <span class="amount">2,999</span>
-                            <span class="period">/year</span>
-                        </div>
-                        <p class="pricing-description">For brands needing credibility</p>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Full claims audit (up to 5 claims)</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Verification badge</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Public verification page</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Quarterly review</span>
-                        </div>
-                    </div>
-                    <a href="#assessment" class="btn btn-primary btn-block">Select Plan</a>
-                </div>
-
-                <!-- Premium Plan -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>CCPA Compliance</h3>
-                        <div class="price">
-                            <span class="currency">₹</span>
-                            <span class="amount">3,999</span>
-                            <span class="period">/one-time</span>
-                        </div>
-                        <p class="pricing-description">For complete legal protection</p>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Comprehensive CCPA audit</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>All Verified Badge features</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Legal guidance session</span>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Priority support</span>
-                        </div>
-                    </div>
-                    <a href="#assessment" class="btn btn-outline btn-block">Select Plan</a>
+                <div class="vision-cta">
+                    <a href="nopage.html" class="btn">
+                        <i class="fas fa-file-certificate"></i> Request Professional Consultation
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works" id="how-it-works">
+    <!-- Banner-specific JavaScript -->
+    <script>
+        // Professional Banner Interactions
+        document.addEventListener('DOMContentLoaded', function () {
+            // Hero stats animation
+            const heroStats = document.querySelectorAll('.stat');
+            const bannerStats = document.querySelectorAll('.vision-stat');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Animate hero stats
+                        heroStats.forEach((stat, index) => {
+                            setTimeout(() => {
+                                stat.style.opacity = '1';
+                                stat.style.transform = 'translateY(0)';
+                            }, index * 100);
+                        });
+
+                        // Animate banner stats
+                        bannerStats.forEach((stat, index) => {
+                            setTimeout(() => {
+                                stat.style.opacity = '1';
+                                stat.style.transform = 'translateY(0)';
+                            }, index * 150 + 400);
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            // Observe hero section
+            const heroSection = document.getElementById('hero');
+            if (heroSection) observer.observe(heroSection);
+
+            // Observe banner section
+            const bannerSection = document.querySelector('.vision-banner');
+            if (bannerSection) observer.observe(bannerSection);
+
+            // Set initial states for animation
+            heroStats.forEach(stat => {
+                stat.style.opacity = '0';
+                stat.style.transform = 'translateY(20px)';
+                stat.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            bannerStats.forEach(stat => {
+                stat.style.opacity = '0';
+                stat.style.transform = 'translateY(20px)';
+                stat.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+
+            // Add number counting animation to hero stats
+            function animateNumber(element, target) {
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        element.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }, 30);
+            }
+
+            // Trigger number animation when stats are visible
+            const numberObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const stats = entry.target.querySelectorAll('.stat-number, .vision-stat-number');
+                        stats.forEach(stat => {
+                            const text = stat.textContent;
+                            if (text === '24' || text === '₹10L' || text === '100%' ||
+                                text === '99.7%' || text === '24/7' || text === '0' || text === 'ISO') {
+                                // For numbers, animate counting
+                                if (text === '24') animateNumber(stat, 24);
+                                if (text === '500+') {
+                                    let current = 0;
+                                    const timer = setInterval(() => {
+                                        current += 10;
+                                        if (current >= 500) {
+                                            stat.textContent = '500+';
+                                            clearInterval(timer);
+                                        } else {
+                                            stat.textContent = Math.floor(current) + '+';
+                                        }
+                                    }, 20);
+                                }
+                                if (text === '99.7%') {
+                                    let current = 0;
+                                    const timer = setInterval(() => {
+                                        current += 2;
+                                        if (current >= 99.7) {
+                                            stat.textContent = '99.7%';
+                                            clearInterval(timer);
+                                        } else {
+                                            stat.textContent = current.toFixed(1) + '%';
+                                        }
+                                    }, 30);
+                                }
+                            }
+                        });
+                        numberObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            if (heroSection) numberObserver.observe(heroSection);
+            if (bannerSection) numberObserver.observe(bannerSection);
+
+            // Add hover effect to hero badge
+            const heroBadge = document.querySelector('.hero-badge');
+            if (heroBadge) {
+                heroBadge.addEventListener('mouseenter', function () {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.15)';
+                });
+
+                heroBadge.addEventListener('mouseleave', function () {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 4px 15px rgba(16, 185, 129, 0.1)';
+                });
+            }
+
+            // Remove any existing leaf animations from script.js
+            // This prevents the floating leaves from appearing
+            document.querySelectorAll('.leaf').forEach(leaf => leaf.remove());
+
+            // Clean up any leaf-related animations
+            const leafAnimationStyles = document.querySelectorAll('style');
+            leafAnimationStyles.forEach(style => {
+                if (style.textContent.includes('leafFloat') ||
+                    style.textContent.includes('leaf-animation') ||
+                    style.textContent.includes('.leaf')) {
+                    style.remove();
+                }
+            });
+        });
+    </script>
+
+    <!-- Features -->
+    <section class="features-section">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Get verified in 3 simple steps</p>
+            <h2 class="section-title">Why Get Verified?</h2>
+            <p class="section-subtitle">Protect your brand and build unshakable consumer trust with our CCPA-compliant
+                verification</p>
 
-            <div class="steps-container">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Submit Documents</h3>
-                        <p>Upload evidence for your claims through our secure portal. We review ingredient lists,
-                            supplier declarations, carbon calculations, etc.</p>
+            <div class="features-grid">
+                <div class="feature-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="feature-icon">
+                        <i class="fas fa-gavel"></i>
                     </div>
+                    <h3>CCPA Compliance</h3>
+                    <p>Stay compliant with the latest 2024-25 CCPA guidelines. Avoid penalties up to ₹10 lakhs for
+                        greenwashing claims.</p>
                 </div>
 
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>We Verify & Audit</h3>
-                        <p>Our experts verify each claim against CCPA guidelines and international standards. We provide
-                            gap analysis and recommendations.</p>
+                <div class="feature-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
+                    <h3>Digital Verification Page</h3>
+                    <p>Every verified brand gets a unique digital verification webpage showcasing their authenticated
+                        claims.</p>
                 </div>
 
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Get Verified</h3>
-                        <p>Receive your verification report and badge. Display our verification mark to build trust and
-                            avoid penalties.</p>
+                <div class="feature-card animate-on-scroll" data-animation="fadeInUp">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
                     </div>
+                    <h3>Trust Badge Display</h3>
+                    <p>Display our verification badge on packaging, websites, and marketing materials to build instant
+                        credibility.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Assessment Form -->
-    <section class="assessment-section" id="assessment">
+    <!-- Badge Showcase -->
+    <section class="badge-showcase">
         <div class="container">
-            <div class="assessment-card">
-                <div class="assessment-content">
-                    <h2>Free Greenwashing Risk Assessment</h2>
-                    <p>Find out if your brand is at risk. Get a free assessment in 24 hours.</p>
+            <h2 class="section-title">Your Verification Badges</h2>
+            <p class="section-subtitle">Display these badges proudly across all customer touchpoints</p>
 
-                    <div class="assessment-features">
-                        <div class="assessment-feature">
-                            <i class="fas fa-check"></i>
-                            <span>No credit card required</span>
-                        </div>
-                        <div class="assessment-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Confidential assessment</span>
-                        </div>
-                        <div class="assessment-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Personalized recommendations</span>
-                        </div>
+            <div class="badge-container">
+                <div class="badge-item animate-on-scroll" data-animation="slideInLeft">
+                    <div class="badge-icon">
+                        <i class="fas fa-leaf"></i>
                     </div>
+                    <h3>Sustainable</h3>
+                    <p>Verified eco-friendly practices</p>
                 </div>
 
-                <div class="assessment-form">
-                    <form id="riskAssessmentForm">
-                        <div class="form-group">
-                            <label for="companyName">Company Name</label>
-                            <input type="text" id="companyName" name="companyName" placeholder="Enter company name"
-                                required>
-                        </div>
+                <div class="badge-item animate-on-scroll" data-animation="fadeInUp">
+                    <div class="badge-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Cruelty-Free</h3>
+                    <p>No animal testing verified</p>
+                </div>
 
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                        </div>
+                <div class="badge-item animate-on-scroll" data-animation="fadeInUp">
+                    <div class="badge-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Vegan</h3>
+                    <p>100% plant-based verified</p>
+                </div>
 
-                        <div class="form-group">
-                            <label for="claims">Which claims do you make? (Select all)</label>
-                            <div class="checkbox-group">
-                                <label class="checkbox">
-                                    <input type="checkbox" name="claims" value="sustainable">
-                                    <span>Sustainable/Eco-friendly</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="claims" value="natural">
-                                    <span>100% Natural/Organic</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="claims" value="cruelty">
-                                    <span>Cruelty-Free</span>
-                                </label>
-                                <label class="checkbox">
-                                    <input type="checkbox" name="claims" value="carbon">
-                                    <span>Carbon Neutral/Free</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="revenue">Annual Revenue</label>
-                            <select id="revenue" name="revenue" required>
-                                <option value="" disabled selected>Select revenue range</option>
-                                <option value="lt10">Less than ₹10 lakhs</option>
-                                <option value="10-50">₹10-50 lakhs</option>
-                                <option value="50-100">₹50 lakhs - ₹1 crore</option>
-                                <option value="gt100">More than ₹1 crore</option>
-                            </select>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block">
-                            Get Free Assessment
-                        </button>
-
-                        <p class="form-note">By submitting, you agree to our <a href="#">Privacy Policy</a></p>
-                    </form>
+                <div class="badge-item animate-on-scroll" data-animation="slideInRight">
+                    <div class="badge-icon">
+                        <i class="fas fa-recycle"></i>
+                    </div>
+                    <h3>Plastic Positive</h3>
+                    <p>Plastic waste reduction verified</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Indicators -->
-    <section class="trust-section">
+    <!-- Process -->
+    <section class="process-section">
         <div class="container">
-            <h2 class="section-title">Protecting Brands from Penalties</h2>
+            <h2 class="section-title">Simple 4-Step Verification</h2>
+            <p class="section-subtitle">Get your GreenXguard badge in just 24 hours</p>
 
-            <div class="client-logos">
-                <div class="client-logo">Startups</div>
-                <div class="client-logo">E-commerce</div>
-                <div class="client-logo">FMCG Brands</div>
-                <div class="client-logo">Beauty Products</div>
-                <div class="client-logo">Food & Beverage</div>
-            </div>
-
-            <div class="trust-badges">
-                <div class="trust-badge">
-                    <i class="fas fa-file-contract"></i>
-                    <span>Based on CCPA Guidelines 2024</span>
-                </div>
-                <div class="trust-badge">
-                    <i class="fas fa-lock"></i>
-                    <span>100% Confidential</span>
-                </div>
-                <div class="trust-badge">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Accuracy Guarantee</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-
-            <div class="faq-container">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Is this a government certification?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No, we are a private verification service. We help companies comply with CCPA guidelines to
-                            avoid penalties. Our verification is based on CCPA's green claim guidelines and
-                            international standards.</p>
-                    </div>
+            <div class="process-steps">
+                <div class="process-step animate-on-scroll" data-animation="fadeInUp">
+                    <h3>Document Upload</h3>
+                    <p>Submit your sustainability claims evidence through our secure portal. We accept supplier
+                        declarations, lab reports, and material certifications.</p>
                 </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        How long does verification take?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Basic verification: 24 hours. Full verification with badge: 3-5 business days. CCPA
-                            Compliance package: 7 business days.</p>
-                    </div>
+                <div class="process-step animate-on-scroll" data-animation="fadeInUp">
+                    <h3>CCPA Audit</h3>
+                    <p>Our experts verify each claim against CCPA 2024 guidelines and international standards. We check
+                        for greenwashing risks and compliance gaps.</p>
                 </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        What if my claims fail verification?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>We provide a detailed gap analysis and recommendations to become compliant. You can re-submit
-                            after making changes at no additional cost for 30 days.</p>
-                    </div>
+                <div class="process-step animate-on-scroll" data-animation="fadeInUp">
+                    <h3>Digital Badge Creation</h3>
+                    <p>Receive your unique GreenXguard verification badge and custom digital verification webpage with
+                        QR code for consumer scanning.</p>
                 </div>
 
-                <div class="faq-item">
-                    <button class="faq-question">
-                        Do you offer refunds?
-                        <i class="fas fa-chevron-down"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes, if we fail to deliver the report within the promised timeline, you get a 100% refund. We
-                            also offer a money-back accuracy guarantee.</p>
-                    </div>
+                <div class="process-step animate-on-scroll" data-animation="fadeInUp">
+                    <h3>Display & Showcase</h3>
+                    <p>Display your badge on packaging, website, and marketing materials. Update your digital
+                        verification page with new claims as you grow.</p>
                 </div>
             </div>
         </div>
@@ -438,11 +1286,10 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="logo">
-                        <div class="logo">
-                            <a href="#home" class="logo-wrapper">
-                                <span class="brand-name">GreenXguard</span>
-                            </a>
-                        </div>
+                        <a href="#home" class="logo-wrapper">
+                            <img src="assets/logo.png" alt="GreenXguard Logo" class="logo-img">
+                            <span class="brand-name">GreenXguard</span>
+                        </a>
                     </div>
                     <p class="footer-description">CCPA-compliant green claim verification for Indian startups. Avoid
                         penalties, build trust.</p>
@@ -457,24 +1304,25 @@
                 <div class="footer-col">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#services">Basic Verification</a></li>
-                        <li><a href="#services">Verified Badge</a></li>
-                        <li><a href="#services">CCPA Compliance</a></li>
-                        <li><a href="verify.html">Verification Directory</a></li>
+                        <li><a href="services.html">Basic Verification</a></li>
+                        <li><a href="services.html">Verified Badge</a></li>
+                        <li><a href="services.html">CCPA Compliance</a></li>
+                        <li><a href="services.html">Digital Verification Page</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h3>Contact</h3>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> contact@greenverify.in</li>
+                        <li><i class="fas fa-envelope"></i> contact.greenxguard@gmail.com</li>
                         <li><i class="fas fa-phone"></i> +91 82409 47366</li>
                     </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>© 2026 GreenXguard. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+                <p>© 2025 GreenXguard. All rights reserved. | <a href="privacypolicy.html">Privacy Policy</a> | <a
+                        href="termsofservice.html">Terms of
                         Service</a> | <a href="#">*Disclaimer</a></p>
                 <p class="disclaimer">GreenXguard is a private verification service and not a government certification
                     body. We help companies comply with CCPA guidelines. </p>
@@ -485,27 +1333,91 @@
         </div>
     </footer>
 
-    <!-- Success Modal -->
-    <div class="modal" id="successModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Assessment Request Submitted!</h3>
-                <button class="modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="success-icon">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-                <p>Thank you! Our team will contact you within 24 hours with your free greenwashing risk assessment.</p>
-                <p>Check your email for confirmation.</p>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary" id="modalClose">Got it!</button>
-            </div>
-        </div>
-    </div>
-
     <script src="script.js"></script>
+    <script src="animations.js"></script>
+    <script>
+        // Hero section animations
+        document.addEventListener('DOMContentLoaded', function () {
+            const heroSection = document.getElementById('hero');
+            if (!heroSection) return;
+
+            // Animate stats when in view
+            const stats = heroSection.querySelectorAll('.stat');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        // Animate stats sequentially
+                        stats.forEach((stat, index) => {
+                            setTimeout(() => {
+                                stat.style.opacity = '1';
+                                stat.style.transform = 'translateY(0)';
+                            }, index * 150);
+                        });
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            observer.observe(heroSection);
+
+            // Set initial states for animation
+            stats.forEach(stat => {
+                stat.style.opacity = '0';
+                stat.style.transform = 'translateY(30px)';
+                stat.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            });
+
+            // Number counting animation
+            const statNumbers = heroSection.querySelectorAll('.stat-number');
+            const numberObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        statNumbers.forEach((num, index) => {
+                            setTimeout(() => {
+                                const text = num.textContent;
+                                if (text === '24') {
+                                    let current = 0;
+                                    const timer = setInterval(() => {
+                                        current += 2;
+                                        if (current >= 24) {
+                                            num.textContent = '24';
+                                            clearInterval(timer);
+                                        } else {
+                                            num.textContent = current;
+                                        }
+                                    }, 50);
+                                } else if (text === '₹10L') {
+                                    let current = 0;
+                                    const timer = setInterval(() => {
+                                        current += 1;
+                                        if (current >= 10) {
+                                            num.textContent = '₹10L';
+                                            clearInterval(timer);
+                                        } else {
+                                            num.textContent = '₹' + current + 'L';
+                                        }
+                                    }, 100);
+                                } else if (text === '100%') {
+                                    let current = 0;
+                                    const timer = setInterval(() => {
+                                        current += 10;
+                                        if (current >= 100) {
+                                            num.textContent = '100%';
+                                            clearInterval(timer);
+                                        } else {
+                                            num.textContent = current + '%';
+                                        }
+                                    }, 30);
+                                }
+                            }, index * 300);
+                        });
+                        numberObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            numberObserver.observe(heroSection);
+        });
+    </script>
 </body>
 
 </html>
